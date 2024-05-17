@@ -1,1 +1,1 @@
-﻿# min project using React
+﻿# mini project using React
