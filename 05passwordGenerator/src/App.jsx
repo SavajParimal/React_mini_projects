@@ -1,8 +1,12 @@
+
+import './App.css'
+
 function App() {
-  
 
   return (
-    <h1>react with vite</h1>
+    <>
+     
+    </>
   )
 }
 
