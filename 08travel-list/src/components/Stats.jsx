@@ -2,8 +2,9 @@ import React from 'react'
 
 function Stats() {
   return (
-    <div>
-      
+    
+    <div className="stats">
+        <em>💼 You have X items on your list, and you already packed X (X%)</em>
     </div>
   )
 }
