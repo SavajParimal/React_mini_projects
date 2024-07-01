@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-function Card() {
-
+function MyCard() {
   const questions = [
     {
       id: 3457,
@@ -36,7 +34,6 @@ function Card() {
       answer: "Controlled element",
     },
   ];
-
   const [selectedId, setSelectedId] = useState(null);
 
   function handleClick(id) {
@@ -45,19 +42,17 @@ function Card() {
 
   return (
     <div className="flashcards">
-      {questions.map((question) => (
+      {questions.map((q) => (
         <div
-          key={question.id}
-          onClick={() => handleClick(question.id)}
-          className={question.id === selectedId ? "selected" : ""}
+          className={q.id === selectedId ? "selected" : ""}
+          key={q.id}
+          onClick={() => handleClick(q.id)}
         >
-          <p>
-            {question.id === selectedId ? question.answer : question.question}
-          </p>
+          {q.id !== selectedId ? q.question : q.answer}
         </div>
       ))}
     </div>
   );
 }
 
-export default Card;
+export default MyCard;
