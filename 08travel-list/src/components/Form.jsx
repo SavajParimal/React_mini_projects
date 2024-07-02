@@ -10,7 +10,6 @@ export default function Form({ hansleItems }) {
     if (!description) return;
 
     const newValue = { id: Date.now(), description, quantity, packed: false };
-    console.log(newValue);
 
     setDescription("");
     setQuantity(1);

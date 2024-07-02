@@ -9,8 +9,19 @@ function App() {
   const [items, setItem] = useState([]);
 
   function hansleItems(item) {
-    console.log("this is App", item);
     setItem((itemms) => [...itemms, item]);
+  }
+
+  function hansleDeletItems(id) {
+    setItem((items) => items.filter((item) => item.id !== id));
+  }
+
+  function hansleToggleItems(id) {
+    setItem((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
   }
 
   return (
@@ -18,7 +29,7 @@ function App() {
       <div className="app">
         <Logo />
         <Form hansleItems={hansleItems} />
-        <List items={items} />
+        <List items={items} hansleDeletItems={hansleDeletItems} hansleToggleItems={hansleToggleItems} />
         <Stats />
       </div>
     </>
