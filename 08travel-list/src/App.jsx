@@ -24,13 +24,23 @@ function App() {
     );
   }
 
+  function hansleClearItems() {
+    const confirmed = window.confirm("Are you sure want to delete all items?");
+    if (confirmed) setItem([]);
+  }
+
   return (
     <>
       <div className="app">
         <Logo />
         <Form hansleItems={hansleItems} />
-        <List items={items} hansleDeletItems={hansleDeletItems} hansleToggleItems={hansleToggleItems} />
-        <Stats />
+        <List
+          items={items}
+          hansleDeletItems={hansleDeletItems}
+          hansleToggleItems={hansleToggleItems}
+          hansleClearItems={hansleClearItems}
+        />
+        <Stats items={items} />
       </div>
     </>
   );
