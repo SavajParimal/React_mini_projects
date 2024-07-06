@@ -1,4 +1,5 @@
 import './App.css'
+import Game from './components/Game'
 import HeroSection from './components/HeroSection'
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
   return (
     <>
     <HeroSection />
+    <Game />
+  
     </>
   )
 }
